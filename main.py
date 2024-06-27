@@ -3,14 +3,15 @@ def main():
     a1 = int(input('Enter your first number: '))
     a2 = int(input('Enter your second number: '))
     N = int(input('Enter the number of sequences: '))
+
     result.append(a1)
     result.append(a2)
-    """
-    ########################################
-    Code Your Program here
-    ########################################
-    """
-
+    
+    for i in range(2, N):
+        next_number = result[-1] + result[-2]
+        result.append(next_number)
+    
+    print(result)
     ########################################
     # Do not delete the return statement
     ########################################
